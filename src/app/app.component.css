@@ -1,0 +1,18 @@
+button{
+    background-color: rgb(71, 71, 221);
+    width:5em;
+    height: 3em;
+    color: azure;
+    border-radius: 10px;
+    border-color: rgb(71, 71, 221);
+    margin :5px;
+}
+.error-msg{
+    color: red;
+}
+input.ng-touched.ng-invalid{
+    border: 2px solid red;
+}
+input.ng-touched.ng-valid{
+    border: 2px solid green;
+}

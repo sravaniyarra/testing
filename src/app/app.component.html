@@ -1,0 +1,18 @@
+<form action="" #loginform="ngForm" (ngSubmit)="submit(loginform)">
+  <div ngModelGroup #grp="ngModelGroup">
+ <label class="m-2"> Username: </label>
+  <input required minlength="4" type="text" class="form-control w-50 m-10" ngModel name="uname" #un="ngModel">
+  <ng-container *ngIf="un.touched">
+    <p class="error-msg"  *ngIf="un.errors?.['required']">Username is required!</p>
+    <p class="error-msg" *ngIf="un.errors?.['minlength']">Username must contains 4 letters</p>
+  </ng-container>
+  <label class="m-2">Password: </label>
+  <input required minlength="8" type="password" class="form-control w-50 m-10" ngModel name="pname" #p="ngModel">
+  <ng-container *ngIf="p.touched">
+    <p class="error-msg"  *ngIf="p.errors?.['required']">Password is required!</p>
+    <p class="error-msg" *ngIf="p.errors?.['minlength']">Password must contains 8 letters</p>
+  </ng-container>
+  <!--<button (click)="show(un,p,grp)">click</button>-->
+  <button class="btn btn-primary m-2">Submit</button>
+</div>
+</form>
